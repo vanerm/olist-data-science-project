@@ -1,4 +1,4 @@
-# Olist Data Science Project
+ink # Olist Data Science Project
 
 Análisis completo del marketplace brasileño Olist utilizando técnicas de ciencia de datos y machine learning.
 
@@ -50,6 +50,10 @@ El proyecto utiliza el dataset público de [Olist Brazilian E-commerce](https://
 ## 🔗 Conexión con Google Colab
 
 Este repositorio está configurado para trabajar directamente con Google Colab.
+
+**[🚀 Abrir en Google Colab](https://colab.research.google.com/drive/1sBmDUGT13lOsoGc8JseWFglr7zCNDdNk?usp=sharing)**
+
+También puedes abrir el notebook directamente desde GitHub haciendo clic en el archivo `olist_data_science_project.ipynb` y seleccionando "Open in Colab".
 
 ## 📈 Resultados Principales
 
