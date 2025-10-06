@@ -178,7 +178,19 @@ Este proyecto es de uso educativo.
 - **LinkedIn:** [Vanesa Mizrahi](https://www.linkedin.com/in/vanesamizrahi)
 
 ### 💡 Sobre este proyecto
-Este proyecto fue desarrollado como parte de mi formación en **Data Science** en Coder House, donde aprendí a crear aplicaciones web completas con Django, desde la concepción hasta el despliegue.
+
+Este proyecto fue desarrollado como parte del curso **Data Science II** de la carrera de **Data Science** en **CoderHouse**,  
+donde se aplicaron técnicas avanzadas de análisis de datos, estadística multivariada y machine learning.  
+
+El trabajo integra todas las etapas del proceso de ciencia de datos:
+- Extracción y limpieza de datos desde fuentes públicas.  
+- Análisis exploratorio (EDA) y visualización interactiva.  
+- Formulación y validación de hipótesis estadísticas.  
+- Construcción y evaluación de modelos supervisados.  
+- Interpretación de resultados y conclusiones orientadas al negocio.  
+
+El objetivo principal fue desarrollar una **solución analítica completa** basada en datos reales del marketplace **Olist**,  
+capaz de explicar los factores que influyen en la **satisfacción del cliente** y predecir comportamientos a partir de variables logísticas y de compra.
 
 ¡Gracias por revisar mi trabajo! 🚀
 
