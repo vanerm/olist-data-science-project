@@ -51,12 +51,15 @@ El análisis incluye:
 ## 📁 Estructura del Proyecto
 
 ```
-├── notebooks/           # Jupyter notebooks
-├── data/               # Datasets (no incluidos en repo)
-├── src/                # Código fuente Python
-├── results/            # Resultados y visualizaciones
-└── README.md           # Este archivo
+
+├── assets/ # Recursos gráficos y archivos de soporte (mapas, imágenes, etc.)
+├── .gitignore # Exclusiones de archivos para Git
+├── README.md # Descripción y documentación general del proyecto
+├── olist_data_science_project.ipynb # Notebook principal con el análisis completo (EDA, PCA, ML, SHAP)
+└── olist_data_science_project.py # Script en Python con las funciones principales y ejecución modular
+
 ```
+
 
 ## 🚀 Instalación
 
@@ -71,7 +74,10 @@ pip install -r requirements.txt
 
 ## 📊 Dataset
 
-El proyecto utiliza el dataset público de [Olist Brazilian E-commerce](https://www.kaggle.com/olistbr/brazilian-ecommerce) disponible en Kaggle.
+
+> 💡 *Nota:* Los datasets originales no se incluyen en el repositorio por tamaño y políticas de privacidad.  
+> Pueden descargarse desde el dataset público de [Olist Kaggle Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) disponible en Kaggle.
+
 
 ## 🔗 Conexión con Google Colab
 
@@ -79,7 +85,6 @@ Este repositorio está configurado para trabajar directamente con Google Colab.
 
 **[🚀 Abrir en Google Colab](https://colab.research.google.com/drive/1sBmDUGT13lOsoGc8JseWFglr7zCNDdNk?usp=sharing)**
 
-También puedes abrir el notebook directamente desde GitHub haciendo clic en el archivo `olist_data_science_project.ipynb` y seleccionando "Open in Colab".
 
 ## 📈 Resultados Principales
 
@@ -87,15 +92,11 @@ También puedes abrir el notebook directamente desde GitHub haciendo clic en el 
 
 ## 🤝 Contribución
 
-Este es un proyecto educativo desarrollado como parte del curso de Data Science II en Coder House.
+Este es un proyecto educativo desarrollado como parte del curso de Data Science II de la Diplomatura de Data Science en [Coder House](https://www.coderhouse.com/).
 
 ## 📄 Licencia
 
 Este proyecto es de uso educativo.
-
-## 👨‍💻 Autor
-
-Desarrollado como parte de la materia de Data Science II de la Diplomatura de Data Science en [Coder House](https://www.coderhouse.com/).
 
 ## 👋 About Me
 
