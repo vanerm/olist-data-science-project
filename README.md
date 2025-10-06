@@ -1,4 +1,6 @@
-ink # Olist Data Science Project
+![Olist Data Science Project Cover](assets/images/cover_image.png)
+
+# Olist Data Science Project
 
 Análisis completo del marketplace brasileño Olist utilizando técnicas de ciencia de datos y machine learning.
 
