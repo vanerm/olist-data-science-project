@@ -85,6 +85,78 @@ Este repositorio está configurado para trabajar directamente con Google Colab.
 
 **[🚀 Abrir en Google Colab](https://colab.research.google.com/drive/1sBmDUGT13lOsoGc8JseWFglr7zCNDdNk?usp=sharing)**
 
+## 📦 Obtención de los datos desde Kaggle
+
+Para ejecutar este proyecto es necesario descargar el dataset público de **Olist Brazilian E-Commerce** desde Kaggle.  
+A continuación se detallan los pasos para generar la **API key**, configurarla en **Google Colab** y descargar los archivos de forma automática.
+
+---
+
+### 🔑 Paso 1. Generar la API Key en Kaggle
+
+1. Iniciá sesión en tu cuenta de [Kaggle](https://www.kaggle.com/).  
+2. Hacé clic en tu foto de perfil (esquina superior derecha) → **Account**.  
+3. Desplazate hasta la sección **API**.  
+4. Hacé clic en **Create New API Token**.  
+5. Se descargará un archivo llamado **`kaggle.json`**, que contiene tus credenciales personales.
+
+> ⚠️ **Importante:** No compartas este archivo ni lo subas a repositorios públicos. Contiene tu clave privada de acceso a la API de Kaggle.
+
+---
+
+### 💾 Paso 2. Subir la API Key a Google Colab
+
+Ejecutá el siguiente bloque en tu notebook y seleccioná el archivo `kaggle.json` descargado:
+
+```python
+from google.colab import files
+files.upload()  # seleccionar el archivo kaggle.json desde tu computadora
+```
+
+### 📁 Paso 3. Configurar la ruta para la CLI de Kaggle
+
+Los siguientes comandos crean la carpeta correcta, mueven el archivo kaggle.json y le asignan permisos de lectura seguros:
+
+```bash
+!mkdir -p ~/.kaggle
+!cp kaggle.json ~/.kaggle/
+!chmod 600 ~/.kaggle/kaggle.json
+```
+
+### 📥 Paso 4. Descargar y descomprimir el dataset de Olist
+
+Una vez configurado el acceso, descargá el dataset con los siguientes comandos:
+
+```bash
+!kaggle datasets download -d olistbr/brazilian-ecommerce -p /content
+!unzip -o /content/brazilian-ecommerce.zip -d /content/olist_dataset
+```
+
+### 🔍 Paso 5. Verificar los archivos descargados
+
+Para confirmar que los CSV fueron descargados correctamente, listá los primeros archivos del dataset:
+
+```bash
+!ls /content/olist_dataset | sed -n '1,20p'
+```
+
+Verás archivos como:
+
+- olist_orders_dataset.csv
+- olist_customers_dataset.csv
+- olist_order_items_dataset.csv
+- olist_products_dataset.csv
+- olist_sellers_dataset.csv, entre otros.
+
+### ✅ Resultado esperado
+
+Al finalizar estos pasos, tendrás todos los archivos del dataset Olist Brazilian E-Commerce disponibles en tu entorno de trabajo (/content/olist_dataset), listos para ser utilizados en las siguientes etapas del análisis:
+
+- Exploración y limpieza de datos (EDA)
+- Análisis de comportamiento de clientes
+- Modelado predictivo y evaluación de satisfacción
+- Visualizaciones y dashboards
+
 
 ## 📈 Resultados Principales
 
