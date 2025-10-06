@@ -89,6 +89,9 @@ tmp/
 *.pdf
 graficos/
 
+# Excepción para imagen de portada del README
+!assets/images/cover_image.png
+
 # Notebook outputs (opcional - para mantener notebooks limpios)
 # Descomenta la siguiente línea si no quieres subir outputs de notebooks
 # *-checkpoint.ipynb
