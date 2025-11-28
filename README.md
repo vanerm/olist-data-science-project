@@ -50,9 +50,11 @@ El análisis incluye:
 ---
 
 ## 📈 Próximos Pasos
-- 🌦️ Enriquecimiento del dataset con **APIs de clima y tránsito** para analizar su relación con las demoras.  
-- 🚀 Optimización y despliegue de modelos en entorno reproducible.  
-- 🔄 Implementación de pipelines automatizados para actualización periódica de datos enriquecidos.
+- 🚚 **Incorporar datos reales de transporte:** tiempos reales por transportista, velocidad media por ruta, capacidad de carga, e incidencias por clima o feriados.  
+- 🤖 **Modelos adicionales:** experimentar con LightGBM, CatBoost (excelente para datos categóricos) y redes neuronales ligeras (MLP).  
+- 🗺️ **Profundizar análisis geográfico:** mapas de calor de retrasos por municipio y feature engineering con "densidad de pedidos por zona".  
+- 💭 **Análisis de sentimiento ampliado:** implementar topic modeling (LDA o BERTopic) y clasificación de emociones (enojo, frustración, satisfacción).  
+- 🚀 **Optimización y despliegue:** implementar pipelines automatizados para actualización periódica de datos enriquecidos y despliegue en entorno reproducible.
 
 ---
 
@@ -178,7 +180,11 @@ Al finalizar estos pasos, tendrás todos los archivos del dataset Olist Brazilia
 - Exploración y limpieza de datos (EDA)
 - Análisis de comportamiento de clientes
 - Modelado predictivo y evaluación de satisfacción
-- Visualizaciones y dashboards
+- Enriquecimiento geográfico con Google Maps API
+- Análisis de sentimiento mediante NLP (HuggingFace)
+- Integración de variables enriquecidas al dataset principal
+- Re-entrenamiento y mejora de modelos predictivos
+- Visualizaciones y dashboards interactivos
 
 
 ## 📈 Resultados Principales
@@ -210,6 +216,10 @@ El trabajo integra todas las etapas del proceso de ciencia de datos:
 - Análisis exploratorio (EDA) y visualización interactiva.  
 - Formulación y validación de hipótesis estadísticas.  
 - Construcción y evaluación de modelos supervisados.  
+- Enriquecimiento de datos con APIs externas (Google Maps API para análisis geográfico).  
+- Procesamiento de lenguaje natural (NLP) para análisis de sentimiento en reseñas.  
+- Integración de múltiples fuentes de datos (estructurados, geográficos y textuales).  
+- Mejora iterativa de modelos mediante incorporación de nuevas features enriquecidas.  
 - Interpretación de resultados y conclusiones orientadas al negocio.  
 
 El objetivo principal fue desarrollar una **solución analítica completa** basada en datos reales del marketplace **Olist**,  
