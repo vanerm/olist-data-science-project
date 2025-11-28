@@ -15,6 +15,9 @@ El análisis incluye:
   - XGBoost  
 - 🔍 **Interpretabilidad del modelo** con técnicas de *Feature Importance* y *SHAP Values*  
 - 🌎 **Visualizaciones geográficas** con mapas interactivos (Folium / Plotly)
+- 🗺️ **Enriquecimiento geográfico** con Google Maps API para cálculo de distancias estado-estado
+- 💭 **Análisis de sentimiento (NLP)** utilizando modelos de HuggingFace para procesar reseñas en portugués
+- 📈 **Re-entrenamiento de modelos** con variables enriquecidas (geográficas + sentimiento)
 
 ---
 
@@ -24,8 +27,10 @@ El análisis incluye:
 3. **Data Wrangling y limpieza de valores nulos.**  
 4. **EDA:** análisis univariado, bivariado y multivariado (PCA y MANOVA).  
 5. **Modelado predictivo:** entrenamiento, optimización y evaluación comparativa de modelos.  
-6. **Interpretabilidad:** análisis de impacto de variables con SHAP.  
-7. *(Etapa futura)* **Enriquecimiento con APIs externas** (clima, tránsito, sentimiento en reviews).  
+6. **Enriquecimiento geográfico con Google Maps API:** cálculo de distancias y tiempos estimados entre estados (seller-customer) para análisis logístico regional.  
+7. **Análisis de sentimiento (NLP):** procesamiento de reseñas con modelos de HuggingFace, generación de variables de polaridad emocional y visualización mediante nubes de palabras.  
+8. **Integración de variables enriquecidas:** merge de distancias geográficas y sentimientos al dataset principal (`df_vista_base`) y EDA multivariable del dataset enriquecido.  
+9. **Re-entrenamiento del modelo:** evaluación comparativa del modelo mejorado con variables externas (Google Maps + sentimiento) vs. modelo original.  
 
 ---
 
@@ -38,13 +43,16 @@ El análisis incluye:
 - 📈 **Statsmodels / SciPy** – Análisis estadístico (ANOVA, MANOVA, correlaciones)  
 - 🔎 **SHAP** – Interpretabilidad de modelos  
 - 🗄️ **SQLite3** – Base de datos relacional local  
+- 🗺️ **Google Maps API** – Cálculo de distancias y tiempos de viaje entre estados  
+- 🤗 **HuggingFace Transformers** – Modelos de NLP para análisis de sentimiento multilingüe  
+- ☁️ **WordCloud** – Visualización de términos más frecuentes en reseñas  
 
 ---
 
 ## 📈 Próximos Pasos
 - 🌦️ Enriquecimiento del dataset con **APIs de clima y tránsito** para analizar su relación con las demoras.  
-- 💬 **Análisis de sentimiento** en reseñas de clientes utilizando modelos de lenguaje (*Hugging Face*).  
-- 🚀 Optimización y despliegue de modelos en entorno reproducible.
+- 🚀 Optimización y despliegue de modelos en entorno reproducible.  
+- 🔄 Implementación de pipelines automatizados para actualización periódica de datos enriquecidos.
 
 ---
 
@@ -53,9 +61,13 @@ El análisis incluye:
 ```
 
 ├── assets/ # Recursos gráficos y archivos de soporte (mapas, imágenes, etc.)
+│   └── images/ # Imágenes del proyecto (cover, visualizaciones, etc.)
+├── inputs/ # Archivos CSV procesados para uso en las secciones 6-9
+│   ├── distancias_estados_google.csv # Distancias y tiempos entre estados (Google Maps API)
+│   └── sentiment_reviews_olist.csv # Reseñas con análisis de sentimiento (HuggingFace)
 ├── .gitignore # Exclusiones de archivos para Git
 ├── README.md # Descripción y documentación general del proyecto
-├── olist_data_science_project.ipynb # Notebook principal con el análisis completo (EDA, PCA, ML, SHAP)
+├── olist_data_science_project.ipynb # Notebook principal con el análisis completo (EDA, PCA, ML, SHAP, enriquecimiento geográfico, NLP)
 └── olist_data_science_project.py # Script en Python con las funciones principales y ejecución modular
 
 ```
@@ -74,9 +86,20 @@ pip install -r requirements.txt
 
 ## 📊 Dataset
 
+### Datasets Originales
 
 > 💡 *Nota:* Los datasets originales no se incluyen en el repositorio por tamaño y políticas de privacidad.  
 > Pueden descargarse desde el dataset público de [Olist Kaggle Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) disponible en Kaggle.
+
+### Datasets Procesados (inputs/)
+
+El proyecto incluye archivos CSV procesados en la carpeta `inputs/` que contienen datos enriquecidos utilizados en las secciones 6-9:
+
+- **`distancias_estados_google.csv`** (43 KB): Contiene distancias y tiempos estimados entre estados calculados mediante Google Maps API. Incluye coordenadas de estados, distancias en kilómetros y tiempos estimados en minutos.
+
+- **`sentiment_reviews_olist.csv`** (6.7 MB): Contiene las reseñas de clientes procesadas con análisis de sentimiento utilizando modelos de HuggingFace. Incluye variables como `sentiment_label_raw`, `sentiment_score_raw`, `sentiment_stars` y `sentiment_polarity`.
+
+> ✅ **Estos archivos pueden subirse a GitHub** ya que son datos procesados/derivados del análisis y no contienen información sensible. Sus tamaños están dentro de los límites permitidos por GitHub (archivos < 100MB no requieren Git LFS).
 
 
 ## 🔗 Conexión con Google Colab
