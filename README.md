@@ -183,7 +183,7 @@ Al finalizar estos pasos, tendrás todos los archivos del dataset Olist Brazilia
 
 ## 📈 Resultados Principales
 
-- [Análisis de satisfacción y desempeño logístico en Olist Marketplace](https://docs.google.com/presentation/d/1mDuVNark3nnoYhvbLiFD52rtzURoOvEXpSQduoCVmCA/edit?usp=sharing)
+- [Análisis de satisfacción y logistica del Marketplace Olist ](https://docs.google.com/presentation/d/1mDuVNark3nnoYhvbLiFD52rtzURoOvEXpSQduoCVmCA/edit?usp=sharing)
 
 ## 🤝 Contribución
 
