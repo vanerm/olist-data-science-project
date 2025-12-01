@@ -25,6 +25,7 @@ También se evalúa si la incorporación de **variables externas** (distancias e
 ---
 
 # 📊 Pipeline General
+```txt
 
 Datos Olist → Limpieza → EDA → Feature Engineering
                ↓
@@ -33,6 +34,7 @@ Datos Olist → Limpieza → EDA → Feature Engineering
     Dataset enriquecido → Modelos (LR / RF / XGB)
                ↓
      Interpretabilidad (SHAP) → Conclusiones
+```txt
 
 El análisis incluye:  
 - 📊 **Análisis Exploratorio de Datos (EDA)**  
