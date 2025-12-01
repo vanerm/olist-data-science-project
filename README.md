@@ -189,7 +189,7 @@ Al finalizar estos pasos, tendrás todos los archivos del dataset Olist Brazilia
 
 ## 📈 Resultados Principales
 
-- [Notebook interactivo en Kaggle – Olist Marketplace – EDA, Feature Engineering & ML](https://www.kaggle.com/code/vanesamizrahi/olist-marketplace-eda-feature-engineering-ml) *(DRAFT)*  
+- [Notebook interactivo en Kaggle – Olist Marketplace – EDA, Feature Engineering & ML](https://www.kaggle.com/code/vanesamizrahi/olist-marketplace-eda-feature-engineering-ml) 
 - [Análisis de satisfacción y logística del Marketplace Olist (presentación)](https://docs.google.com/presentation/d/1mDuVNark3nnoYhvbLiFD52rtzURoOvEXpSQduoCVmCA/edit?usp=sharing)
 
 ## 🤝 Contribución
