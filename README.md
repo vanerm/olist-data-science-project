@@ -34,7 +34,7 @@ Datos Olist → Limpieza → EDA → Feature Engineering
     Dataset enriquecido → Modelos (LR / RF / XGB)
                ↓
      Interpretabilidad (SHAP) → Conclusiones
-```txt
+```
 
 El análisis incluye:  
 - 📊 **Análisis Exploratorio de Datos (EDA)**  
