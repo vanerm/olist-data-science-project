@@ -26,7 +26,6 @@ También se evalúa si la incorporación de **variables externas** (distancias e
 
 # 📊 Pipeline General
 
-```txt
 Datos Olist → Limpieza → EDA → Feature Engineering
                ↓
    Google Maps API (distancias) + NLP (sentimientos)
