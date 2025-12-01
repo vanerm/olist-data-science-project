@@ -1,9 +1,39 @@
+# 🛍️ Olist Marketplace – Data Science Project  
+**EDA • Feature Engineering • Machine Learning • Logística • NLP • Geoanálisis**
+
 ![Olist Data Science Project Cover](assets/images/cover_image.png)
 
-🛍️ Análisis de Satisfacción de Clientes – Olist Marketplace
+# 🔎 TL;DR 
+Este proyecto analiza el marketplace **Olist** para identificar los factores que explican la **satisfacción del cliente** y los **retrasos logísticos**, integrando:
 
-## 📄 Descripción del Proyecto
-Este proyecto analiza el comportamiento de los clientes y las entregas en el marketplace **Olist**, con el objetivo de identificar los factores que más influyen en la **satisfacción del cliente** y el cumplimiento de entregas.  
+- Machine Learning supervisado  
+- Google Maps API para distancias entre estados  
+- Análisis de sentimiento (NLP) con HuggingFace  
+- Feature engineering avanzado  
+- Interpretabilidad del modelo (SHAP)
+
+El objetivo final es construir una **solución analítica completa** que conecte logística, experiencia del cliente y comportamiento de compra.
+
+---
+
+# 🎯 Objetivo del Proyecto
+
+Comprender **qué variables influyen en la satisfacción del cliente** y cómo se relacionan los tiempos de entrega, la distancia geográfica y el contenido emocional de las reseñas.
+
+También se evalúa si la incorporación de **variables externas** (distancias entre estados + sentimiento) **mejora el rendimiento del modelo**.
+
+---
+
+# 📊 Pipeline General
+
+```txt
+Datos Olist → Limpieza → EDA → Feature Engineering
+               ↓
+   Google Maps API (distancias) + NLP (sentimientos)
+               ↓
+    Dataset enriquecido → Modelos (LR / RF / XGB)
+               ↓
+     Interpretabilidad (SHAP) → Conclusiones
 
 El análisis incluye:  
 - 📊 **Análisis Exploratorio de Datos (EDA)**  
@@ -31,6 +61,17 @@ El análisis incluye:
 7. **Análisis de sentimiento (NLP):** procesamiento de reseñas con modelos de HuggingFace, generación de variables de polaridad emocional y visualización mediante nubes de palabras.  
 8. **Integración de variables enriquecidas:** merge de distancias geográficas y sentimientos al dataset principal (`df_vista_base`) y EDA multivariable del dataset enriquecido.  
 9. **Re-entrenamiento del modelo:** evaluación comparativa del modelo mejorado con variables externas (Google Maps + sentimiento) vs. modelo original.  
+
+---
+
+🏆 Resultados Principales (Resumen)
+
+| Modelo              | F1 Score         | Comentario                        |
+| ------------------- | ---------------- | --------------------------------- |
+| Logistic Regression | ~0.88            | Modelo lineal fuerte              |
+| Random Forest       | ~0.88            | Similar a LR, diferencias mínimas |
+| XGBoost             | **~0.89**        | Mejor desempeño global            |
+| Modelo enriquecido  | **+3–5% mejora** | Incluye distancia + sentimiento   |
 
 ---
 
@@ -187,7 +228,7 @@ Al finalizar estos pasos, tendrás todos los archivos del dataset Olist Brazilia
 - Visualizaciones y dashboards interactivos
 
 
-## 📈 Resultados Principales
+## 📈 Resultados del Proyecto
 
 - [Notebook interactivo en Kaggle – Olist Marketplace – EDA, Feature Engineering & ML](https://www.kaggle.com/code/vanesamizrahi/olist-marketplace-eda-feature-engineering-ml) 
 - [Análisis de satisfacción y logística del Marketplace Olist (presentación)](https://docs.google.com/presentation/d/1mDuVNark3nnoYhvbLiFD52rtzURoOvEXpSQduoCVmCA/edit?usp=sharing)
@@ -202,7 +243,13 @@ Este proyecto es de uso educativo.
 
 ## 👋 About Me
 
-¡Hola! Soy **Vanesa Mizrahi**, desarrolladora mobile iOS y apasionada por los datos y el aprendizaje continuo.
+Soy Vanesa Mizrahi, desarrolladora móvil iOS y analista de datos.
+Me especializo en:
+
+- iOS Mobile Developer
+- Ciencia de Datos aplicada a negocio
+- Modelos interpretables
+- Integración con APIs externas
 
 ### 🔗 Conecta conmigo
 - **LinkedIn:** [Vanesa Mizrahi](https://www.linkedin.com/in/vanesamizrahi)
